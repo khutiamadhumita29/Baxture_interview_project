@@ -1,11 +1,13 @@
 const express = require('express');
-const multer = require('multer');
-const path = require('path');
-const fs = require('fs');
 
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+
+// import routes 
+let fileRoutes = require('./src/routes/fileRoutes')
+app.use('/',fileRoutes)
 
 // Start the server
 app.listen(PORT, () => {
