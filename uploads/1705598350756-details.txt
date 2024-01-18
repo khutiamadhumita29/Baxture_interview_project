@@ -1,0 +1,9 @@
+https://asklearngrow.com/
+Students:
+test.developers2017@gmail.com
+Nopass123@
+
+HOST: 3.145.77.199
+USERNAME: ubuntu
+PASSPHRASE: Nopass@123
+

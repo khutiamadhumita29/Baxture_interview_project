@@ -5,11 +5,11 @@ const fileSchema = new Schema({
     type: String,
     required: true
   },
-  filePath: {
+  path: {
     type: String,
     required: true
   },
-  fileSize: {
+  size: {
     type: Number,
     required: false
   },
@@ -19,5 +19,7 @@ const fileSchema = new Schema({
     default: new Date()
   }
 });
-const fileModel = mongoose.model("fileModel", fileSchema);
-module.exports = fileModel;
+const file = mongoose.model("file", fileSchema);
+
+
+module.exports = file;

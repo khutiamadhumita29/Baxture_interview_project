@@ -1,22 +1,27 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const fileAnalysisSchema = new Schema({
+   
+    taskId: {
+        type: 'objectId', 
+        unique: true,
+        required: true,
+        select: false
+    },
     fileId: {
-        type: Object,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "file",
         required: true
     },
-    countWords: {
-        type: Number,
-        required: true
-    },
-    findTopKWords: {
+    requestType: {
         type: String,
         required: true
     },
-    countUniqueWords: {
-        type: Number,
+    result: {
+        type: Object,
         required: true
     },
+
     createdAt: {
         type: Date,
         required: true,
