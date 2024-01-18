@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "8c7b883b-edb4-4ab8-b797-d2a62de878bc",
+		"name": "Baxture_interview_project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9917420"
+	},
+	"item": [
+		{
+			"name": "upload file",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/tripa/Downloads/fileupload.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/fileupload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fileupload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "analyssis",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"65a9592818af37ab902c6c47\",\r\n    \"wordName\":\"filter\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/fileAnalysis?action=countWords",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fileAnalysis"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "countWords"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get analysis",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/fileAnalysis?taskId=65a95d99ea8cb434b5c7fb80",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"fileAnalysis"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "65a95d99ea8cb434b5c7fb80"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
